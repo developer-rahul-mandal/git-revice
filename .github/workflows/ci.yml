@@ -1,0 +1,16 @@
+name: My First CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check-project:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+
+      - name: Check index.html
+        run: test -f index.html
