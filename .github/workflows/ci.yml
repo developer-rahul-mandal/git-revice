@@ -14,9 +14,9 @@ jobs:
 
       - name: Check index.html
         run: test -f index.html
-        
+
       - name: Explore runner
         run: |
           pwd
-          ls
+          ls -la
           echo "GitHub Actions is awesome!"
