@@ -20,3 +20,4 @@ jobs:
           pwd
           ls -la
           echo "GitHub Actions is awesome!"
+          echo "$GITHUB_REPOSITORY"
