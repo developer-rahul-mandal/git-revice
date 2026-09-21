@@ -16,8 +16,15 @@ jobs:
         run: test -f index.html
 
       - name: Explore runner
+        env:
+            SEC_NEW: ${{ secrets.SEC_NEW }}
         run: |
           pwd
           ls -la
           echo "GitHub Actions is awesome!"
-          echo "$GITHUB_REPOSITORY"
+          if [ -n "$SEC_NEW" ]; then
+            echo "Secret is available!"
+          else
+            echo "Secret is missing!"
+            exit 1
+          fi
