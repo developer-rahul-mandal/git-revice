@@ -35,5 +35,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Say hello
-        run: echo "Hello from Job 2!"
+      - name: Check files
+        run: ls -la
