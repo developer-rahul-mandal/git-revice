@@ -31,3 +31,9 @@ jobs:
             echo "Secret is missing!"
             exit 1
           fi
+  second-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say hello
+        run: echo "Hello from Job 2!"
