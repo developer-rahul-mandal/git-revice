@@ -32,11 +32,12 @@ jobs:
             exit 1
           fi
   second-job:
+    needs: check-project
     runs-on: ubuntu-latest
 
     steps:
       - name: get code access
         uses: actions/checkout@v6
-        
+
       - name: Check files
         run: ls -la
